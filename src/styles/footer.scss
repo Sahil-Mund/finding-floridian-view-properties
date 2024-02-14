@@ -1,0 +1,243 @@
+@import "./modules/_variables.scss";
+
+section.footer-section {
+    background: $nude-color;
+
+    padding: 2% 7% 1% 10%;
+    font-family: $primary-font-family;
+    a {
+        text-decoration: none;
+    }
+
+    .contact {
+        display: flex;
+        .info {
+            width: 40%;
+
+            .social-section {
+                // padding-top: 10px;
+                .follow {
+                    p {
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 127%; /* 27.94px */
+                    }
+                }
+
+                .social-icons {
+                    display: flex;
+                    gap: 20px;
+                    a {
+                        svg {
+                            height: 30px;
+                            width: 47px;
+                            fill: $matte-black;
+                        }
+                    }
+                }
+            }
+
+            .details {
+                margin-top: 46px;
+                display: flex;
+                // padding: 6% 0;
+                .navs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 40%;
+
+                    span {
+                        color: $matte-black;
+                        font-size: 19px;
+                        font-weight: 300;
+                        line-height: 127%;
+                    }
+                }
+            }
+        }
+
+        .connect-form {
+            width: 60%;
+            margin: auto;
+            // background: rgba(245, 241, 238, 0.8);
+            // backdrop-filter: blur(50px);
+
+            h1 {
+                margin: 0;
+                font-size: 37px;
+                font-weight: 600;
+                line-height: 58px;
+                padding-left: 7%;
+            }
+
+            p {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26.5px;
+                width: 98%;
+                padding-left: 7%;
+            }
+
+            form {
+                padding: 3%;
+                width: 88%;
+                margin: auto;
+                margin-top: 1px;
+                div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    input {
+                        width: 48%;
+                        height: 43.434px;
+
+                        border: 1px solid #6a704c;
+                        background: #fff;
+                    }
+                    input::placeholder {
+                        padding-left: 4%;
+                    }
+                    input::selection {
+                        padding-left: 4%;
+                    }
+                }
+
+                input {
+                    height: 43.434px;
+                    border: 1px solid $matte-black;
+                    background: #fff;
+                    width: 100%;
+                    margin-top: 2%;
+                }
+
+                input::placeholder {
+                    padding-left: 2%;
+                }
+                input::selection {
+                    padding-left: 2%;
+                }
+
+                .btn-primary {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    margin-top: 3%;
+                    font-size: 18px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .partners-section {
+        margin-top: 0%;
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            h3 {
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 101%;
+            }
+
+            .image-items {
+                display: flex;
+                justify-content: center;
+                gap: 77px;
+
+                .item-container {
+                    .item {
+                        svg {
+                            cursor: pointer;
+                            width: 40px;
+                            height: 71px;
+                        }
+                        h4 {
+                            width: 264px;
+                            line-height: 106%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-banner {
+    background-color: #322e24;
+    color: #fff;
+    padding: 0.5px;
+    padding-left: 152px;
+}
+
+@media only screen and (max-width: 500px) {
+    section.footer-section {
+        .contact {
+            flex-direction: column;
+            .info {
+                width: 100%;
+                .social-section {
+                    // padding-top: 10px;
+                    .follow {
+                        text-align: center;
+                    }
+
+                    .social-icons {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                    }
+                }
+                .details {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    gap: 10px;
+                    .external-links {
+                        width: 60%;
+                    }
+                }
+            }
+            .connect-form {
+                text-align: center;
+                width: 100%;
+                margin-top: 20px;
+                h1 {
+                    padding-left: 0;
+                    font-size: 20px;
+                }
+                p {
+                    margin: 0;
+                    padding-left: 0;
+                    width: auto;
+                }
+                form {
+                    div {
+                        flex-direction: column;
+                        input {
+                            width: 98%;
+                        }
+                    }
+                }
+            }
+        }
+        .partners-section {
+            .container {
+                .image-items {
+                    gap: 30px;
+                }
+            }
+        }
+    }
+    .footer-banner {
+        text-align: center;
+        padding-left: 0;
+    }
+}

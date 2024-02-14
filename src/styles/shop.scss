@@ -1,0 +1,166 @@
+@import "./modules/variables";
+
+section.shop {
+    .banner-container {
+        background: $nude-color;
+        width: 100%;
+
+        .banner {
+            width: 79%;
+            gap: 48px;
+            padding-bottom: 4%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .banner-content {
+                width: 40%;
+
+                p:nth-child(1) {
+                    font-size: 9em;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 113%;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                }
+
+                p:nth-child(2) {
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 113%;
+                    text-transform: uppercase;
+                    margin-top: 0;
+                }
+            }
+
+            .banner-img {
+                padding-top: 3%;
+                width: 60%;
+                height: 327px;
+                display: flex;
+                gap: 14px;
+                img {
+                    object-fit: cover;
+                    width: 107%;
+                    height: 115%;
+                    max-width: 235px;
+                }
+            }
+        }
+    }
+
+    .post-container {
+        background: #fff;
+        .posts {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 43px;
+            align-items: center;
+            padding: 3% 0;
+
+            .post {
+                width: 31%;
+                background: $nude-color;
+
+                max-height: 430px;
+                min-height: 430px;
+                border-radius: 10px;
+                div {
+                    padding: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        height: 281px;
+
+                        width: 100%;
+                    }
+                    p {
+                        font-size: 17px;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                    a{
+                        color: $matte-black
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section.shop {
+        .banner-container {
+            margin: auto;
+            .banner {
+                width: 80%;
+                gap: 10px;
+                margin: auto;
+
+                .banner-content {
+                    width: auto;
+                    margin: auto;
+                    text-align: center;
+
+                    p:nth-child(1) {
+                        font-size: 60px;
+                    }
+
+                    p:nth-child(2) {
+                        font-size: 15px;
+                    }
+                }
+
+                .banner-img {
+                    // width: 60%;
+
+                    // img {
+                    //     width: 30%;
+                    //     height: 99%;
+                    // }
+                    display: none;
+                }
+            }
+        }
+
+        .post-container {
+            width: 100%;
+            .posts {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 1fr;
+                align-items: center;
+                margin: auto;
+
+                .post {
+                    width: 100%;
+                    margin: auto;
+                    min-height: auto;
+
+                    div {
+                        // padding: 5%;
+
+                        img {
+                            width: 100%;
+                            object-fit: contain;
+                            height: auto;
+                        }
+                        p {
+                            // font-size: 17px;
+                            // font-weight: 400;
+                            // line-height: 113%;
+                            // text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

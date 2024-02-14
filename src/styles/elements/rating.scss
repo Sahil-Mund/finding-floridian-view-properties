@@ -1,0 +1,24 @@
+@import '../modules/variables';
+
+.rating-container {
+  display: flex;
+  align-items: center;
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .selected {
+    background-color: $dark-green-color;
+  }
+
+  .line {
+    height: 2px;
+    width: 15px;
+    // border-bottom: 2px solid #ccc;
+  }
+}

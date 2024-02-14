@@ -1,0 +1,207 @@
+@import "./modules/variables.scss";
+
+section.home-tour-section {
+    padding: 3%;
+
+    .container-box {
+        background: $box-cntr-color;
+        filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+        width: 70%;
+        margin: auto;
+        padding: 7%;
+        padding-top: 5%;
+        text-align: center;
+
+        h3 {
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 119%;
+            margin-bottom: 5%;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            margin: 4% 0px;
+            .left {
+                margin-left: 2%;
+                p {
+                    font-size: 23px;
+                    font-style: normal;
+                    font-weight: 500;
+                    width: 127%;
+                    line-height: 113%;
+                }
+            }
+
+            .right {
+                margin: auto auto auto 20%;
+
+                div {
+                    border-radius: 8px;
+                    border: 1px solid #6a704c;
+                    // padding: 10px;
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+
+                    .dropdown {
+                        border: none;
+                        background: none;
+                        select {
+                            border: none;
+                            background: none;
+                            outline: none;
+
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            padding: 14px;
+                            padding-right: 19px;
+
+                            // to remove the down arrow icon
+                            // appearance: none;
+                            // -webkit-appearance: none;
+                            // -moz-appearance: none;
+                            text-indent: 1px;
+                            text-overflow: "";
+
+                            option {
+                                padding: 5px 10px;
+                                text-indent: 5px;
+                                border-radius: 15px;
+                                background-color: #f5f1ee;
+
+                                &:checked,
+                                &:hover {
+                                    color: #f5f1ee;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .gallery {
+            // display: flex;
+            // justify-content: space-around;
+            // flex-wrap: wrap;
+            // max-width: 900px; // Adjust as needed
+            // margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(11.25rem, 100%), 1fr));
+            grid-gap: 1rem;
+
+            .video-container {
+                position: relative;
+                width: 100%;
+                margin: 10px;
+                video {
+                    height: 326px;
+                    object-fit: cover;
+                    width: 93%;
+                }
+                // video {
+                //     width: 100%;
+                //     height: auto;
+                //     border-radius: 8px;
+                // }
+                // .play-button {
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                //     font-size: 24px;
+                //     color: white;
+                //     cursor: pointer;
+                // }
+                .play-button-overlay {
+                    position: absolute;
+                    top: 52%;
+                    margin-left: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    opacity: 0.7;
+                    transition: opacity 0.3s ease;
+
+                    svg {
+                        width: 82%;
+                        height: 90px;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section.home-tour-section {
+        padding: 0;
+        .container-box {
+            width: 100%;
+            background-color: #fff;
+
+            h3 {
+                font-size: 21px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 119%;
+                margin-bottom: 5%;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .left {
+                    p {
+                        width: auto;
+                    }
+                }
+
+                .right {
+                    width: 95%;
+                    margin: auto;
+
+                    div {
+                        .up-down-icon{
+                            display: none;
+                        }
+                        .dropdown {
+                            width: 96%;
+                            select {
+                                width: 98%;
+
+                                option{
+                                    width: 50%;
+                                }
+                            }
+
+                           
+                         
+                        }
+                    }
+                }
+            }
+
+            .gallery {
+                .video-container {
+                    margin: 10px 0 0 0;
+                    video {
+                        height: 430px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import 'Font';
+@import 'Base';
+
+h2 {
+  @include fontModerateNormal;
+  line-height: 18px;
+  padding: 0px 0px 5px 0px;
+  small {
+    color: $text-color-4;
+    display: block;
+    @include fontModerateSmall;
+    font-weight: normal;
+    line-height: 16px;
+    // margin-bottom: 12px;
+  }
+}
+
+h3 {
+  @include fontModerateMedium;
+  line-height: 18px;
+  padding: 0px 0px 5px 0px;
+  small {
+    color: $text-color-4;
+    display: block;
+    @include fontModerateSmall;
+    font-weight: normal;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+h6 {
+  @include fontSmall;
+  line-height: 14px;
+  padding: 0px 0px 10px 0px;
+}

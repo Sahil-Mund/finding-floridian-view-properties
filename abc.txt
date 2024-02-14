@@ -1,0 +1,36 @@
+HEX Colors
+Peach - #F0CFA0
+Orange - #E18B26
+Coral - #C66D55
+Blue - #789E9E
+Green - #304E3C
+Matte Black - #322E24
+Nude - #FFFAF3
+
+Fonts
+Header and Logo Font - Noir Et Blanc
+Paragraph/Body Font - Montserrat Regular
+Paragraph/Body Font Italics - Montserrat Regular Italics 
+
+Main Logo - Finding Floridians in Orange 
+Sub Logo - FF Palm Tree in Orange 
+
+
+For the website:
+Change all font colors to the Matte Black #322E24
+Change all green bubbles now to the new green color #304E3C
+Change background boxes to nude #FFFAF3
+Change all font to Montserrat Regular, except the front page box with Let Your Home Girl Find Your Place to Call Home - change to Noir Et Blanc
+
+
+1. social Icon svg color change
+2. contact form svg,, roundeed edge -> normal efge
+
+w=1728
+h=1117
+
+todos:-
+
+a. Backend integration for post creation 
+b. backend login integration
+c. 

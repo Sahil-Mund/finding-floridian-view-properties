@@ -1,0 +1,113 @@
+@import "./modules/_variables.scss";
+
+.header {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #6a704c;
+    .logo {
+        img {
+            object-fit: contain;
+            width: 317px;
+            height: 82px;
+        }
+    }
+    .nav-items {
+        .mobile-menu-toggle {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+
+            li {
+                color: $matte-black;
+                font-family: $primary-font-family;
+
+                text-align: center;
+                font-size: 18px;
+                font-weight: 300;
+                list-style-type: none;
+            }
+
+            a {
+                color: $matte-black;
+                text-decoration: none;
+            }
+
+            a.active {
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        display: flex;
+        align-items: center;
+        .logo {
+            flex: 1;
+            img {
+                width: 235px;
+                height: 82px;
+            }
+        }
+        .mobile-menu-toggle {
+            font-size: 30px;
+        }
+    }
+    .nav-items {
+        .mobile-menu-toggle {
+            display: block !important;
+        }
+        ul {
+            flex-direction: column;
+            gap: 0 !important;
+            padding: 0;
+
+            li {
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                border-bottom: 1px solid #6a704c;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &.mobile-menu {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu-toggle {
+            display: block;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        &.mobile-menu-open {
+            .mobile-menu-toggle {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+            }
+        }
+    }
+}

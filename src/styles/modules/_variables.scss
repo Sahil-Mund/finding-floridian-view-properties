@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Noir";
+    src: url("../../assets/fonts/NOIRetBLANC-Regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat-Italic";
+    src: url("../../assets/fonts/Montserrat-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../../assets/fonts/Montserrat-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+$background-color: #fff;
+$primary-font-family: "Montserrat-Regular", sans-serif;
+$noir-font-family: "Noir", sans-serif;
+$primary-italic-font-family: "Montserrat-Italic", sans-serif;
+$matte-black: #322e24;
+
+$bx-cntr-border-radius: 0px;
+$box-cntr-color: #fffaf3;
+$nude-color: #fffaf3;
+$dark-green-color: #304E3C;
+
+$boxShadow-primary: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+
+// Peach - #F0CFA0
+// Orange - #E18B26
+// Coral - #C66D55
+// Blue - #789E9E
+// Matte Black - #322E24
+// Nude - #FFFAF3
+// Green - #304E3C

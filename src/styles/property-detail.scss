@@ -1,0 +1,810 @@
+@import "./modules/mixins";
+@import "./modules/variables";
+
+.btn-unlock-animation {
+  @keyframes moveFromRight {
+    0% {
+      transform: translateX(0); /* Start position at the right */
+    }
+    100% {
+      transform: translateX(-98px); /* End position in the middle */
+    }
+  }
+
+  .animated {
+    display: flex;
+    justify-content: flex-end;
+    svg {
+      transform: translateX(-98px);
+      animation: moveFromRight 2s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+  }
+}
+
+.property-container {
+  padding: 3% 9%;
+  @extend .btn-unlock-animation;
+
+  .dummy-content {
+    filter: blur(7px);
+  }
+
+  .btn-unlock {
+    background: linear-gradient(45deg, black, transparent);
+    background: #fff;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-left: 47px;
+    border-radius: 0px 0px 12px 12px;
+    border-bottom: 1px solid $dark-green-color;
+    background: rgba(232, 222, 213, 0.3);
+    backdrop-filter: blur(50px);
+    border-left: 1px solid $dark-green-color;
+    border-right: 1px solid $dark-green-color;
+    z-index: 11;
+    position: absolute;
+    width: 235px;
+    left: 37%;
+    // margin-top: 221px;
+
+    span {
+      color: $dark-green-color;
+
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 113%;
+    }
+  }
+  svg.lock-icon,
+  svg.unlock-icon {
+    path:nth-child(1) {
+      fill: $dark-green-color;
+    }
+    path:nth-child(2) {
+      stroke: $dark-green-color;
+    }
+  }
+
+  svg:not(.lock-icon):not(.unlock-icon):not(.no-external-fill) {
+    path {
+      fill: $dark-green-color;
+    }
+  }
+  .banner {
+    display: flex;
+    gap: 45px;
+
+    .image-container {
+      flex: 60% 1;
+      position: relative;
+      img {
+        max-height: 61vh;
+        width: 100%;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 12px;
+        right: 17px;
+        gap: 11px;
+        // border-radius: 12px;
+        background: $nude-color;
+        padding: 6px;
+        span {
+          color: $dark-green-color;
+
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 113%; /* 15.82px */
+        }
+      }
+    }
+
+    .banner-details {
+      flex: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .heading {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+        color: $matte-black;
+
+        font-size: 30px;
+
+        font-style: normal;
+        font-weight: 700;
+        // line-height: 49.5px; /* 69.718% */
+        text-transform: uppercase;
+      }
+
+      .sub-heading {
+        color: $dark-green-color;
+
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 49.5px; /* 107.609% */
+        text-transform: uppercase;
+      }
+
+      i {
+        color: $dark-green-color;
+
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 49.5px;
+      }
+      .ratings {
+        justify-content: space-between;
+        display: flex;
+        width: 80%;
+        align-items: center;
+        margin-bottom: 15px;
+        max-width: 350px;
+
+        span:nth-child(1) {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          svg {
+            width: 17px;
+          }
+
+          b {
+            color: $dark-green-color;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28.5px; /* 129.545% */
+          }
+
+          .reviews {
+            color: $dark-green-color;
+
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28.5px; /* 178.125% */
+          }
+        }
+
+        span:nth-child(2) {
+          color: $dark-green-color;
+
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 28.5px; /* 129.545% */
+        }
+      }
+
+      .descriptions {
+        max-width: 400px;
+
+        p {
+          margin: 2px 0;
+          line-height: 20px;
+          // text-align: justify;
+          word-wrap: break-word;
+          color: $dark-green-color;
+
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 23.5px; /* 129.545% */
+        }
+      }
+
+      .price {
+        display: flex;
+        margin-top: 8px;
+
+        span:nth-child(1) {
+          color: $dark-green-color;
+
+          font-size: 49px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 49.5px; /* 88.393% */
+          text-transform: uppercase;
+        }
+
+        span:nth-child(2) {
+          color: $dark-green-color;
+
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 28.5px; /* 129.545% */
+        }
+      }
+
+      .btns {
+        display: flex;
+        gap: 15px;
+        button {
+          margin-top: 10px;
+          padding: 12px;
+          max-width: 400px;
+          // width: 84%;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .neighborhood-container {
+    border: 2px solid $dark-green-color;
+    background: $nude-color;
+
+    padding: 31px;
+    margin: 50px 0;
+    // border-radius: 12px;
+    display: flex;
+
+    .grade {
+      width: 60%;
+
+      .top {
+        .neighborhood-grade {
+          display: flex;
+          gap: 20px;
+
+          .title {
+            display: block;
+            color: $dark-green-color;
+
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 31.5px;
+            width: 200px;
+          }
+        }
+        p {
+          color: $dark-green-color;
+
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 28.5px;
+          width: 512px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        .left,
+        .right {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          width: 44%;
+          .grades-desc {
+            color: $dark-green-color;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28.5px; /* 158.333% */
+            margin-left: 4%;
+          }
+        }
+
+        svg {
+          height: 164px;
+          margin: auto;
+        }
+      }
+      .grade-btn {
+        // border-radius: 12px;
+        background: $dark-green-color;
+        color: #f5f1ee;
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: 49.5px; /* 107.609% */
+        text-transform: uppercase;
+        font-size: 34px;
+        padding: 1% 2%;
+      }
+      .grade-btn-sm {
+        // border-radius: 8px;
+        background: $dark-green-color;
+        color: #f5f1ee;
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: 49.5px; /* 107.609% */
+        text-transform: uppercase;
+        font-size: 19px;
+        padding: 10px;
+      }
+    }
+
+    .map {
+      position: relative;
+      iframe {
+        width: 455px;
+        height: 303px;
+        border: none;
+      }
+    }
+  }
+
+  .apartment-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    padding: 10px 0;
+
+    hr {
+      width: 90%;
+      margin: 10px 0px;
+    }
+
+    .apartment-summary {
+      flex: 50;
+      .title {
+        color: $dark-green-color;
+
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 49.5px;
+        text-transform: uppercase;
+      }
+
+      .info-tiles {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+
+        div {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+
+          span {
+            margin-left: 8px;
+            color: $dark-green-color;
+
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28.5px;
+          }
+        }
+      }
+
+      .apartment-description {
+        p {
+          margin-top: 5px;
+          line-height: 24px;
+          padding: 10px 0;
+
+          color: $dark-green-color;
+
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 28.5px; /* 129.545% */
+          width: 810px;
+        }
+      }
+    }
+
+    .apartment-img {
+      max-height: 444px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 95px;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        // border-radius: 12px;
+        background: #f5f1ee;
+        padding: 2%;
+        width: 45%;
+        position: absolute;
+        right: 10px;
+        bottom: 23px;
+
+        span {
+          color: $dark-green-color;
+
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 113%;
+        }
+      }
+    }
+  }
+
+  .feature-perks {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    .details {
+      h3 {
+        color: $dark-green-color;
+
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28.5px;
+        text-transform: uppercase;
+      }
+      .perk {
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        div {
+          h4 {
+            color: $dark-green-color;
+
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28.5px; /* 129.545% */
+            text-transform: uppercase;
+          }
+          p {
+            color: $dark-green-color;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28.5px;
+            width: 466px;
+          }
+        }
+      }
+
+      h4,
+      p {
+        margin: 5px;
+        padding: 2px 10px;
+      }
+
+      h4 {
+        text-transform: uppercase;
+      }
+    }
+
+    .vr {
+      height: auto;
+      width: 2px;
+      background-color: rgba(106, 112, 76, 0.8);
+      margin: 0 16px;
+    }
+  }
+
+  .features-desc {
+    padding: 4%;
+    width: 70%;
+    margin: auto;
+    p {
+      color: $dark-green-color;
+      text-align: center;
+
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 28.5px;
+    }
+  }
+
+  .feature-perks:nth-child(2)::after {
+    content: "";
+    height: 100%;
+    /* Adjust height as needed */
+    width: 2px;
+    /* Adjust width as needed */
+    background-color: #000;
+    /* Change color as needed */
+    margin: 0 16px;
+    /* Adjust margin as needed */
+  }
+
+  .gallery-container {
+    .gallery-title {
+      color: $dark-green-color;
+      text-align: center;
+
+      font-size: 46px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 49.5px; /* 107.609% */
+      text-transform: uppercase;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+
+      .gallery-item {
+        overflow: hidden;
+        // border-radius: 10px;
+        max-height: 250px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .property-container {
+    text-align: center;
+    .banner {
+      flex-direction: column;
+      gap: 13px;
+
+      .banner-details {
+        .heading {
+          font-size: 32px;
+          justify-content: space-evenly;
+        }
+
+        .sub-heading {
+          font-size: 27px;
+        }
+
+        i {
+          font-size: 14px;
+        }
+
+        .descriptions {
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .price {
+          justify-content: center;
+          margin: 10px 0;
+          span:nth-child(1) {
+            font-size: 35px;
+          }
+        }
+
+        .btns {
+          display: flex;
+          gap: 15px;
+        }
+      }
+    }
+
+    .neighborhood-container {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+
+      .grade {
+        width: 100%;
+
+        .top {
+          .neighborhood-grade {
+            display: flex;
+            gap: 20px;
+          }
+
+          p {
+            width: auto;
+            font-size: 15px;
+          }
+        }
+
+        .bottom {
+          flex-direction: column;
+          .left,
+          .right {
+            text-align: start;
+            width: 100%;
+            .grades-desc {
+              width: auto;
+            }
+          }
+
+          svg {
+            display: none;
+          }
+        }
+        .grade-btn {
+          padding: 3% 4%;
+        }
+      }
+
+      .map {
+        width: 100%;
+        margin: 36px 0 0 0;
+        iframe {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .apartment-info-container {
+      display: block;
+
+      hr {
+        width: 90%;
+        margin: 10px 0px;
+      }
+
+      .apartment-summary {
+        flex: 100;
+        .title {
+          color: $dark-green-color;
+
+          font-size: 37px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 49.5px;
+          text-transform: uppercase;
+        }
+
+        .info-tiles {
+          display: grid;
+          justify-content: center;
+          align-items: center;
+
+          div {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            span {
+              margin-left: 8px;
+              color: $dark-green-color;
+
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 28.5px;
+            }
+          }
+        }
+
+        .apartment-description {
+          p {
+            font-size: 15px;
+            width: auto;
+          }
+        }
+      }
+
+      .apartment-img {
+        margin-top: 0;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        div {
+          width: 64%;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .feature-perks {
+      display: flex;
+      flex-direction: column;
+      .details {
+        h3 {
+          color: $dark-green-color;
+
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 28.5px;
+          text-transform: uppercase;
+        }
+        .perk {
+          flex-direction: column;
+
+          img {
+            width: 60px;
+            height: 60px;
+          }
+
+          div {
+            p {
+              width: auto;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .features-desc {
+      width: 100%;
+      margin: auto;
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .dummy-unlock {
+      left: 4%;
+      .pointer {
+        font-size: 13px;
+      }
+    }
+
+    .gallery-container {
+      .gallery-title {
+        color: $dark-green-color;
+        text-align: center;
+
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 49.5px; /* 107.609% */
+        text-transform: uppercase;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+
+        .gallery-item {
+          overflow: hidden;
+          // border-radius: 10px;
+          max-height: 250px;
+        }
+
+        .gallery-item img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+    }
+  }
+}

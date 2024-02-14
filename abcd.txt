@@ -1,0 +1,105 @@
+ {
+    type: "rent",
+    qna: [
+      {
+        step: "1",
+        question: "What is the MLS# number of this property?",
+        answerType: "input",
+        options: [{ fieldName: "mlsNumber", text: "Type MLS# number" }],
+      },
+      {
+        step: "2",
+        question: "Provide the property name, description, and budget.",
+        answerType: "input",
+        options: [
+          { fieldName: "propertyName", text: "Property Name" },
+          { fieldName: "propertyDesc", text: "Property Description" },
+          { fieldName: "Price", text: "Property Budget" },
+        ],
+
+        subquestions: [
+          {
+            qNumber: "1",
+            question: "How many number of persons can stay in your property",
+            options: ["Any", "1+", "2+", "3+", "4+", "5+"],
+            fieldName: "numOfPersons",
+          },
+        ],
+      },
+      {
+        step: "3",
+        question: "What type of rental property is this?",
+        answerType: "checkbox",
+        options: ["Apartment", "Townhome", "House"],
+        subquestions: [
+          {
+            qNumber: "1",
+            question: "Number of bedrooms present in your property",
+            options: ["Any", "1+", "2+", "3+", "4+", "5+"],
+            fieldName: "numOfBedrooms",
+          },
+          {
+            qNumber: "2",
+            question: "Number of bathrooms present in your property",
+            options: ["Any", "1+", "1.5+", "2+", "3+", "4+"],
+            fieldName: "numofBathRooms",
+          },
+        ],
+      },
+      {
+        step: "4",
+        question: "Where is the property located: City, Country, or Suburb?",
+        answerType: "radio",
+        options: ["City", "Country", "Suburb"],
+      },
+      {
+        step: "5",
+        question:
+          "Rate the following aspects of your property on a scale of 1-5:",
+        answerType: "rating",
+        options: [
+          "Walkability",
+          "Closeness to Restaurants/Stores",
+          "Proximity to Parks/Nature",
+          "Quality of Schools",
+          "Distance to the Ocean",
+          "Proximity to a Lake",
+        ],
+      },
+      {
+        step: "6",
+        question: "What amenities does your property offer?",
+        answerType: "checkbox",
+        options: [
+          "New Construction",
+          "Newly Renovated",
+          "Pool",
+          "Gym",
+          "Yard",
+          "Luxury",
+          "Pet Friendly",
+          "Parking",
+          "Concierge",
+          "Waterfront",
+          "In-Unit Laundry",
+        ],
+      },
+      {
+        step: "7",
+        question: "Which part of Florida is the property located in?",
+        answerType: "radio",
+        options: [
+          "Central",
+          "South",
+          "West (Gulf)",
+          "North",
+          "East (Atlantic Ocean)",
+        ],
+      },
+      {
+        step: "8",
+        question: "Upload banner image and the other",
+        answerType: "image-upload",
+      },
+    ],
+  },

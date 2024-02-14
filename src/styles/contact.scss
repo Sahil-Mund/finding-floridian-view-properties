@@ -1,0 +1,233 @@
+@import "./modules/_variables.scss";
+
+section.contact-section {
+    .contact-container {
+        gap: 70px;
+        // box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        // transition: box-shadow 0.3s ease-in-out;
+        fill: #fff;
+        // filter: drop-shadow(7px 4px 53px rgba(0, 0, 0, 0.1));
+        display: flex;
+        padding: 2%;
+        width: 67%;
+        margin: 4% auto;
+        // background-color: $box-cntr-color;
+
+        .image-container {
+            display: flex;
+            width: 36%;
+            .svg-overlay {
+                height: 494px;
+                background-image: url("https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86b75781-0786-4df7-880e-3211816ea6ad.png");
+            }
+            img:nth-child(2) {
+                height: 494px;
+                margin-left: -178px;
+            }
+        }
+
+        .form-container {
+            width: 64%;
+
+            h5 {
+                font-size: 37px;
+
+                line-height: 113%;
+                text-transform: uppercase;
+                margin-top: 0px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 113%;
+                text-transform: uppercase;
+                margin-top: -58px;
+            }
+
+            .social-container {
+                margin-bottom: 13px;
+                display: flex;
+                gap: 9px;
+
+                span {
+                    text-align: center;
+
+                    font-size: 15px;
+
+                    font-weight: 500;
+                    line-height: 113%;
+                    text-transform: uppercase;
+                    padding: 2.5% 4%;
+                    border: 1px solid $dark-green-color;
+                    background: #fff;
+                }
+            }
+
+            form {
+                .group {
+                    display: flex;
+                    gap: 2%;
+                    margin-bottom: 1%;
+
+                    input {
+                        width: 48%;
+                        border: 1px solid $dark-green-color;
+                        background: #fff;
+                        padding: 2%;
+                        outline: none;
+                    }
+                    input::placeholder {
+                        font-size: 12px;
+
+                        line-height: 26px; /* 144.444% */
+                    }
+                }
+
+                .checkbox {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input[type="radio"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background-color: #e0dad5;
+                        cursor: pointer;
+                        min-height: 40px;
+                        margin-bottom: 10px;
+                        width: 40px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        cursor: pointer;
+                    }
+                    input[type="radio"]::before {
+                        content: "\2713";
+                        position: relative;
+                        top: 5px;
+                        left: 4px;
+                        transform: translate(-50%, -50%);
+                        font-size: 20px;
+                        color: #4a3163;
+                        font-weight: bold;
+                        opacity: 0;
+                    }
+                    input[type="radio"]:checked::before {
+                        opacity: 1;
+                    }
+
+                    div {
+                        display: flex;
+                        gap: 7px;
+                        align-items: center;
+
+                        input {
+                            width: 42px;
+                            height: 23px;
+                        }
+                    }
+
+                    label {
+                        font-size: 11px;
+                        font-style: italic;
+                        font-weight: 300;
+                        line-height: normal;
+                    }
+                }
+
+                div {
+                    width: 100%;
+                    textarea {
+                        background: #fff;
+                        width: 99%;
+                        margin: 3% 0;
+                        outline: none;
+                        padding: 2%;
+                        font-family: $primary-font-family;
+                        resize: none;
+                    }
+                    textarea::placeholder {
+                        font-size: 13px;
+
+                        line-height: 26px;
+                    }
+                }
+
+                button {
+                    width: 99%;
+                    color: #f9f4f0;
+                    text-align: center;
+
+                    font-size: 18px;
+
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section.contact-section {
+        .contact-container {
+            width: 90%;
+            text-align: center;
+            .image-container {
+                display: none;
+            }
+
+            .form-container {
+                width: 100%;
+
+                h5 {
+                    font-size: 38px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                .social-container {
+                    justify-content: center;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                form {
+                    .group {
+                        flex-direction: column;
+                        gap: 5px;
+                        input {
+                            width: 100%;
+                            font-size: 32px;
+                        }
+                        input::placeholder {
+                            font-size: 15px;
+                        }
+                    }
+
+                    .checkbox {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        grid-template-columns: repeat(2, 1fr);
+                        margin: 5% 0;
+                        column-gap: 25px;
+                    }
+
+                    div {
+                        width: 100%;
+
+                        textarea::placeholder {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
