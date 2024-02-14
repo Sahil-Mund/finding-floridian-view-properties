@@ -121,11 +121,10 @@ export const apartmanetDetails = [
         ],
 
         extendedPerksDesc:
-            "Nestled in Alexandria's heart, the Fridai Apartment offers easy access to the historic Old Town. Wander through cobblestone streets, explore charming shops, and savor moments at cozy cafes.<br> With public transportation at your fingertips, commuting is a breeze. Dive into Alexandria's vibrant arts and culture scene, making the most of your stay's central location.",
+            "Nestled in Alexandria's heart, the EVO Apartments offers easy access to the historic Old Town. Wander through cobblestone streets, explore charming shops, and savor moments at cozy cafes.<br> With public transportation at your fingertips, commuting is a breeze. Dive into Alexandria's vibrant arts and culture scene, making the most of your stay's central location.",
 
         gallery:
             [
-                "https://images1.apartments.com/i2/0egNNo3zof54xv72GNUeM934xy9jL-r8xfCmXNjYodw/116/evo-apartments-saint-petersburg-fl-building-photo.jpg?p=1",
                 "https://images1.apartments.com/i2/R0pUVRSlJ0qr0MV_hm4DA7ldpucz7NJzVC0SGz87b9s/116/evo-apartments-saint-petersburg-fl-lobby.jpg?p=1",
                 "https://images1.apartments.com/i2/GgOGBQ5CB1amSnEeSbORsbrBSZMcTolRqlxpDlAzcGg/116/evo-apartments-saint-petersburg-fl-mail-room.jpg?p=1",
                 "https://images1.apartments.com/i2/spNHCj9mzGYFdPcNCfIVJN5k8uZqp1s8SL2DpgcytjM/116/evo-apartments-saint-petersburg-fl-package-lockers.jpg?p=1",

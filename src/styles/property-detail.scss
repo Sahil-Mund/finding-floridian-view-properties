@@ -579,7 +579,14 @@
       .banner-details {
         .heading {
           font-size: 32px;
-          justify-content: space-evenly;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+       gap: 5px;
+
+       svg{
+        width: 100%;
+       }
         }
 
         .sub-heading {
@@ -607,6 +614,10 @@
         .btns {
           display: flex;
           gap: 15px;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          gap: 2px;
         }
       }
     }
