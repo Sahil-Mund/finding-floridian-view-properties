@@ -105,11 +105,11 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
       toast.error("Please fill out the fields to continue!!");
       return;
     }
-    const res = await submitContactForm(formData as contactFormDataType);
-    if (!res.STATUS) {
-      toast.error(res.message);
-      return;
-    }
+    // const res = await submitContactForm(formData as contactFormDataType);
+    // if (!res.STATUS) {
+    //   toast.error(res.message);
+    //   return;
+    // }
 
     resetForm();
     markAsSubmitted();
