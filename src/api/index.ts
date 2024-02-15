@@ -1,7 +1,8 @@
 // const BASE_URI = "http://localhost:5050";
 // const BASE_URI = "https://finding-floridian-server.onrender.com";
 // const BASE_URI = "https://floridian-server.onrender.com";
-const BASE_URI = "https://finding-floridian-server.vercel.app";
+// const BASE_URI = "https://finding-floridian-server.vercel.app";
+const BASE_URI = "http://finding-floridian-v1.eba-xvek8nst.ap-south-1.elasticbeanstalk.com";
 
 
 export const CHAT_AI_RESPONSE = `${BASE_URI}/api/bot/v1/get-bot-response`;

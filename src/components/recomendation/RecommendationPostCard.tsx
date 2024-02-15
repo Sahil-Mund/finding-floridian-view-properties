@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ButtonModal from "./buttonModal";
 
@@ -44,6 +44,18 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
     // setIsModalVisible(isVisibe);
     e.stopPropagation();
   };
+
+  useEffect(() => {
+    const is_Submitted = JSON.parse(
+      localStorage.getItem("IS_CONTACT_FORM_SUBMITTED") as string
+    );
+    console.log(is_Submitted);
+
+    if (is_Submitted) {
+      setIspremiumUser(true);
+    }
+    // localStorage.setItem("IS_CONTACT_FORM_SUBMITTED", JSON.stringify(true));
+  },[]);
 
   return (
     <section className="recommendation-post-section">

@@ -6,12 +6,15 @@ import { MailIcon } from "../assets/svg";
 import { ThankYou } from "../components";
 import { submitContactForm } from "../backend";
 import { contactFormDataType } from "../types/type";
+import { useNavigate } from "react-router-dom";
 
 interface ContactPageProps {
   // Add your component's props here
 }
 
 const ContactPage: React.FC<ContactPageProps> = (props) => {
+  const navigate = useNavigate();
+
   const intitalState = {
     firstName: "",
     lastName: "",
@@ -107,8 +110,13 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
       toast.error(res.message);
       return;
     }
+
     resetForm();
     markAsSubmitted();
+
+    localStorage.setItem('IS_CONTACT_FORM_SUBMITTED', JSON.stringify(true));
+    navigate('/');
+
   };
 
   if (isSubmitted) {
