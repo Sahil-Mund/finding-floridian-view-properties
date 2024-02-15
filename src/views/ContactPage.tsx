@@ -133,11 +133,11 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
         <div className="form-container">
           <h5>Carter Long</h5>
           <p>Your Home girl</p>
-          <div className="social-container">
+          {/* <div className="social-container">
             <MailIcon />
 
             <span>Shop</span>
-          </div>
+          </div> */}
           <form onSubmit={handleSubmit}>
             <div className="group">
               <input

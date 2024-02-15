@@ -1,6 +1,8 @@
 // const BASE_URI = "http://localhost:5050";
 // const BASE_URI = "https://finding-floridian-server.onrender.com";
-const BASE_URI = "https://floridian-server.onrender.com";
+// const BASE_URI = "https://floridian-server.onrender.com";
+const BASE_URI = "https://finding-floridian-server.vercel.app";
+
 
 export const CHAT_AI_RESPONSE = `${BASE_URI}/api/bot/v1/get-bot-response`;
 export const CONTACT_US_FORM = `${BASE_URI}/api/contact/v1/contact-us`;

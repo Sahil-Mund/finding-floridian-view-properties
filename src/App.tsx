@@ -56,10 +56,12 @@ function App() {
         {/* <ChatBotButton /> */}
         {/* <UserLogIn /> */}
         <Routes>
-          <Route path="/" element={<RecommendationPostCard data={postCardDetails} />} />
+          <Route
+            path="/"
+            element={<RecommendationPostCard data={postCardDetails} />}
+          />
           {/* <Route path="/home-tour" element={<HomeTour />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route path="/contact-us" element={<ContactPage />} />
           <Route path="/questionnaire" element={<QuestionnaireLandingPage />} />
           <Route path="/questionnaire/qna" element={<QStepper />} />
           <Route
@@ -71,6 +73,8 @@ function App() {
             path="/property-details/gallery"
             element={<PropertyDetailGallery />}
           />
+          <Route path="/contact-us" element={<ContactPage />} />
+
           {/* <Route
             path="/property/new-post/okefjjgrtgbjtrhgbh/qfgrkjgh6hy"
             element={<NewPropertyPost />}

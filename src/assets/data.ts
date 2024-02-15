@@ -1,15 +1,16 @@
+
 export const postCardDetails = [
     {
         id: 1,
         image:
             "https://images1.apartments.com/i2/C1XEqjvBXKaAxoSsgBovofHoJ6yEZJNz27YRO9bMphA/102/evo-apartments-saint-petersburg-fl-exterior.jpg?p=1",
         // price: "$4,200/m", //rent
-        price: "2,265",
+        price: "4,200",
         title: "EVO APARTMENTS",
         url: "/property-detail", //needs to be dynamic
-        bedroom: "3",
-        bathroom: "2",
-        area: "1,498",
+        bedroom: "1",
+        bathroom: "1",
+        area: "1,168",
         location: "Saint Petersburg",
     },
     {
@@ -56,30 +57,31 @@ export const apartmanetDetails = [
             // review: 0,
             location: "Saint Petersburg",
             para: "Whether your focus is labor or leisure, Evo is crafted to impress and built with custom conveniences in mind. You'll discover coworking spaces for career innovation and places to unwind like the rooftop terrace. The bay views are bound to take your breath away.",
-            price: "$2,265",
+            price: "$4,200",
             freq: "/per month",
             type: "rental",
             buttonLabel: "Talk with your Home Girl",
+            contactURL : "https://evostpete.com/apartments/?spaces_tab=plan-detail&detail=250716",
             propertyOwner: {
                 email: "abc@gmail.com",
             },
         },
         neighbourHood: {
             property_title: "EVO Apartments",
-            grade: "A+",
             desc: "is situated in a thriving community that offers safety, convenience, and a vibrant atmosphere.",
-            Safety: "A+",
-            "Cultural Diversity": "A+",
-            "Education & Schools": "A+",
+            grade: "A",
+            Safety: "C",
+            "Cultural Diversity": "A",
+            "Education & Schools": "B",
             Convenience: "A+",
-            "Healthcare Facilities": "A+",
-            "Scenic Views": "A+",
-            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.3195428413355!2d-82.64024172453044!3d27.769126676147344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e184b2aa0c27%3A0x3a99241794124339!2s334%202nd%20Ave%20S%2C%20St.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1707918500399!5m2!1sen!2sin"
+            "Healthcare Facilities": "A-",
+            "Scenic Views": "A",
+            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225821.65399698773!2d-82.8622682706131!3d27.826285196479425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ba9c0be39%3A0x8ae47e3adb68d30a!2sSt.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1707988133489!5m2!1sen!2sin"
         },
         apartmentDetails: {
-            bedroom: "3",
-            bath: "2",
-            area: "1,498",
+            bedroom: "1",
+            bath: "1",
+            area: "1168",
             video_src: "https://vapi.apartments.com/video/play/5j5n4u?source=42",
             desc: `An incomparable view. And, you deserve the best St. Pete has to offer. Discover an indulgent city highrise with shopping, dining and cultural events right outside your door. Directly from your private balcony, you'll be surrounded by panoramic scenery of downtowns St. Petersburg's skyline and 244 miles of the sparkling Tampa Bay.`,
             img: "https://images1.apartments.com/i2/VptbAjENQxb5FXNc2rIx3NX5c_9TIe_fx-rpINLEcjE/116/evo-apartments-saint-petersburg-fl-building-photo.jpg?p=1",
@@ -156,20 +158,21 @@ export const apartmanetDetails = [
             freq: "/per month",
             type: "rental",
             buttonLabel: "Talk with your Home Girl",
+            contactURL : "https://ascentstpete.com/floorplans/",
             propertyOwner: {
                 email: "abc@gmail.com",
             },
         },
         neighbourHood: {
             property_title: "Ascent Apartments",
-            grade: "A+",
             desc: "is situated in a thriving community that offers safety, convenience, and a vibrant atmosphere.",
-            Safety: "A+",
-            "Cultural Diversity": "A+",
-            "Education & Schools": "A+",
+            grade: "A",
+            Safety: "C",
+            "Cultural Diversity": "A",
+            "Education & Schools": "B",
             Convenience: "A+",
-            "Healthcare Facilities": "A+",
-            "Scenic Views": "A+",
+            "Healthcare Facilities": "A-",
+            "Scenic Views": "A",
             iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.2235886824606!2d-82.63850092453028!3d27.772084076145532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ce7caebc7%3A0x33de43f0991d0194!2s225%201st%20Ave%20N%2C%20St.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1707924504337!5m2!1sen!2sin"
         },
         apartmentDetails: {
@@ -255,20 +258,22 @@ export const apartmanetDetails = [
             freq: "/per month",
             type: "rental",
             buttonLabel: "Talk with your Home Girl",
+            contactURL : "https://www.camdenliving.com/apartments/st-petersburg-fl/camden-pier-district",
+
             propertyOwner: {
                 email: "abc@gmail.com",
             },
         },
         neighbourHood: {
             property_title: "Camden Pier District",
-            grade: "A+",
             desc: "is situated in a thriving community that offers safety, convenience, and a vibrant atmosphere.",
-            Safety: "A+",
-            "Cultural Diversity": "A+",
-            "Education & Schools": "A+",
+            grade: "A",
+            Safety: "C",
+            "Cultural Diversity": "A",
+            "Education & Schools": "B",
             Convenience: "A+",
-            "Healthcare Facilities": "A+",
-            "Scenic Views": "A+",
+            "Healthcare Facilities": "A-",
+            "Scenic Views": "A",
             iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.3631983187333!2d-82.63934322453048!3d27.767781076148058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19b375ee441%3A0x6bf27dd864d65250!2s330%203rd%20St%20S%2C%20St.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1707928799264!5m2!1sen!2sin"
         },
         apartmentDetails: {

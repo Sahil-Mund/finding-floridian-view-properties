@@ -6,7 +6,7 @@ import {
   LocationIcon,
 } from "../../assets/svg";
 import { formatText } from "../../common/helper";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface BannerProps {
   // Add your component's props here
@@ -16,26 +16,30 @@ interface BannerProps {
   title: string;
 }
 
-const Banner: React.FC<BannerProps> = ({ data, propertyType, gallery , title}) => {
+const Banner: React.FC<BannerProps> = ({
+  data,
+  propertyType,
+  gallery,
+  title,
+}) => {
   // const {
   //   propertyOwner: { email: propertyOwnerEmail },
   // } = data;
+  const navigate = useNavigate();
 
   const propertyOwnerEmail = "";
-  const handleContactProperty = () => {
-    // TODO : write logic for sending email
-    console.log(`Email Sent to ${propertyOwnerEmail}`);
-  };
-
 
   return (
     <section className="banner">
       <div className="image-container">
         <img className="banner-image" src={data?.img_url} alt="" />
-        <Link to={`/property-details/gallery`} state={{
-           gallery,
-           title
-        }}>
+        <Link
+          to={`/property-details/gallery`}
+          state={{
+            gallery,
+            title,
+          }}
+        >
           <div>
             <GalleryIcon />
             <span>Show all photos</span>
@@ -75,12 +79,16 @@ const Banner: React.FC<BannerProps> = ({ data, propertyType, gallery , title}) =
         </div>
 
         <div className="btns">
-          <Link
-            to={"/"}
-            
+          <a
+            // to="#"
+            href="mailto:carter@findingfloridians.com"
             style={{
               width: propertyType === "BUY" ? "100%" : "",
             }}
+          //   onClick={(e) => {
+          //     window.location.href = "mailto:sahilmund01@gmail.com";
+          //     e.preventDefault();
+          // }}
           >
             <button
               className="btn-primary"
@@ -91,12 +99,12 @@ const Banner: React.FC<BannerProps> = ({ data, propertyType, gallery , title}) =
             >
               {data.buttonLabel}
             </button>
-          </Link>
+          </a>
           {/* Hiding the below button in Buy properties */}
           {propertyType === "RENT" && (
-            <button className="btn-primary" onClick={handleContactProperty}>
-              Contact Property
-            </button>
+            <Link to={data.contactURL} target="_blank">
+              <button className="btn-primary">Contact Property</button>
+            </Link>
           )}
         </div>
       </div>
