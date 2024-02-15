@@ -38,7 +38,7 @@ export const postCardDetails = [
         bathroom: "2",
         area: "1,250",
         location: "Saint Petersburg",
-    },
+    }
 ];
 
 
@@ -46,6 +46,7 @@ export const postCardDetails = [
 export const apartmanetDetails = [
     {
         id: 1,
+        isPremium: false,
         property_title: "EVO Apartments",
         banner: {
             img_url:
@@ -61,7 +62,7 @@ export const apartmanetDetails = [
             freq: "/per month",
             type: "rental",
             buttonLabel: "Talk with your Home Girl",
-            contactURL : "https://evostpete.com/apartments/?spaces_tab=plan-detail&detail=250716",
+            contactURL: "https://evostpete.com/apartments/?spaces_tab=plan-detail&detail=250716",
             propertyOwner: {
                 email: "abc@gmail.com",
             },
@@ -76,7 +77,8 @@ export const apartmanetDetails = [
             Convenience: "A+",
             "Healthcare Facilities": "A-",
             "Scenic Views": "A",
-            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225821.65399698773!2d-82.8622682706131!3d27.826285196479425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ba9c0be39%3A0x8ae47e3adb68d30a!2sSt.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1707988133489!5m2!1sen!2sin"
+            location_url:"https://www.google.com/maps/place/St.+Petersburg,+FL+33701,+USA/@27.8265104,-82.7798593,12z/data=!3m1!4b1!4m6!3m5!1s0x88c2e19ba9c0be39:0x8ae47e3adb68d30a!8m2!3d27.7696063!4d-82.6321376!16s%2Fm%2F01_0w_9?entry=ttu",
+            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112910.59273912094!2d-82.7798593421373!3d27.826510408264312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ba9c0be39%3A0x8ae47e3adb68d30a!2sSt.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1708005058097!5m2!1sen!2sin"
         },
         apartmentDetails: {
             bedroom: "1",
@@ -143,6 +145,8 @@ export const apartmanetDetails = [
 
     {
         id: 2,
+        isPremium: true,
+
         property_title: "Ascent Apartments",
         banner: {
             img_url:
@@ -158,7 +162,7 @@ export const apartmanetDetails = [
             freq: "/per month",
             type: "rental",
             buttonLabel: "Talk with your Home Girl",
-            contactURL : "https://ascentstpete.com/floorplans/",
+            contactURL: "https://ascentstpete.com/floorplans/",
             propertyOwner: {
                 email: "abc@gmail.com",
             },
@@ -243,6 +247,7 @@ export const apartmanetDetails = [
 
     {
         id: 3,
+        isPremium: true,
         property_title: "Camden Pier District",
         banner: {
             img_url:
@@ -258,7 +263,7 @@ export const apartmanetDetails = [
             freq: "/per month",
             type: "rental",
             buttonLabel: "Talk with your Home Girl",
-            contactURL : "https://www.camdenliving.com/apartments/st-petersburg-fl/camden-pier-district",
+            contactURL: "https://www.camdenliving.com/apartments/st-petersburg-fl/camden-pier-district",
 
             propertyOwner: {
                 email: "abc@gmail.com",
@@ -339,5 +344,4 @@ export const apartmanetDetails = [
 
             ],
     }
-
 ]

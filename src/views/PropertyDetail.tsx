@@ -30,11 +30,16 @@ const PropertyDetail: React.FC<PropertyDetailProps> = (props) => {
   useEffect(() => {
     console.log(location);
     const idx = location.search.split("&title=")[0].split("?d=")[1];
+    //TODO: workaround for now
+    if(+idx > 1){
+      return;
+    }
+
     setProperty(+idx - 1);
   }, [location, location.search, location.key]);
 
   // const STATIC_TYPE : "BUY" | "RENT" = "RENT";
-  const { banner, neighbourHood, property_title, gallery, ...apartmentInfo } =
+  const { banner, neighbourHood, property_title, isPremium, gallery, ...apartmentInfo } =
     apartmanetDetails[Number(property)]; /// [0];
   // propertyType === "RENT" ? rentalApartmanetDetails : SalesApartmanetDetails;
   // rentalApartmanetDetails

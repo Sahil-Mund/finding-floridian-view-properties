@@ -115,7 +115,10 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
                     )}
                   </div>
                   <div className="item-content dummy-content">
-                    <h2 className="item-price">$4,600</h2>
+                    <h2 className="item-price">$4,600   <span style={{
+                      fontSize:'20px'
+                      
+                    }}>/per Month</span></h2>
                     <h2 className="item-title">Magnolia Heights</h2>
 
                     <div className="item-amenities">
