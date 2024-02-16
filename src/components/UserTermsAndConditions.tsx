@@ -41,28 +41,39 @@ const UserTermsAndConditions: React.FC = () => {
       <p>
         a. We value and prioritize your privacy. Please refer to our Privacy
         Policy, which outlines how we collect, use, disclose, and protect your
-        personal information. b. We will not sell or share your contact
+        personal information.
+      </p>
+      <p>
+      b. We will not sell or share your contact
         information with any third parties, except as described in our Privacy
         Policy or as required by law.
       </p>
       <h4>3. User Obligations:</h4>
       <p>
         a. Users are required to provide accurate and up-to-date contact
-        information during the registration process. b. Users must comply with
-        all applicable laws and regulations related to telecommunications and
-        privacy and refrain from using our platform to engage in any illegal or
-        unauthorized activities. c.Users understand and acknowledge that they
-        are solely responsible for any communications or interactions they
-        initiate with other users or listings through our platform.
+        information during the registration process.
+      </p>
+      <p>
+        b. Users must comply with all applicable laws and regulations related to
+        telecommunications and privacy and refrain from using our platform to
+        engage in any illegal or unauthorized activities.
+      </p>
+      <p>
+        c.Users understand and acknowledge that they are solely responsible for
+        any communications or interactions they initiate with other users or
+        listings through our platform.
       </p>
       <h4>4. Disclaimer of Warranties:</h4>
       <p>
         a. We strive to provide a reliable and efficient platform; however, we
         do not warrant the availability, accuracy, or reliability of the
         listings or the responsiveness of the contact form. Users rely on the
-        information and services provided at their own risk. b. Finding
-        Floridians disclaims any liability for the actions, omissions, or
-        misconduct of any users or listings featured on our platform.
+        information and services provided at their own risk.
+      </p>
+      <p>
+        b. Finding Floridians disclaims any liability for the actions,
+        omissions, or misconduct of any users or listings featured on our
+        platform.
       </p>
 
       <h4>5. Limitation of Liability:</h4>
