@@ -142,6 +142,9 @@ export const apartmanetDetails = [
 
         gallery:
             [
+                "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/7e019e47-4587-41a3-a0cb-ae5f86f91173_WhatsApp%20Image%202024-02-16%20at%207.jpeg",
+                "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/75ca4bfb-da8c-4216-8b7f-8eb391aa5220_WhatsApp%20Image%202024-02-16%20at%207.jpeg",
+                "https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/46f0d084-ec54-49c7-9578-895c8bd8e7e2_WhatsApp%20Image%202024-02-16%20at%207.jpeg",
                 "https://images1.apartments.com/i2/R0pUVRSlJ0qr0MV_hm4DA7ldpucz7NJzVC0SGz87b9s/116/evo-apartments-saint-petersburg-fl-lobby.jpg?p=1",
                 "https://images1.apartments.com/i2/GgOGBQ5CB1amSnEeSbORsbrBSZMcTolRqlxpDlAzcGg/116/evo-apartments-saint-petersburg-fl-mail-room.jpg?p=1",
                 "https://images1.apartments.com/i2/spNHCj9mzGYFdPcNCfIVJN5k8uZqp1s8SL2DpgcytjM/116/evo-apartments-saint-petersburg-fl-package-lockers.jpg?p=1",

@@ -16,6 +16,7 @@ export const GET_LOGGED_IN_USER_DETAILS = `${BASE_URI}/api/user/v1/getUserDetail
 
 export const CREATE_PROPERTY = `${BASE_URI}/api/property/v1/add-property`;
 
+export const FORMS_SPARK = "https://submit-form.com/Ry0sAZZrK"
 // http://localhost:3000/api/bot/v1/get-bot-response
 
 // Hasura APIs

@@ -3,6 +3,7 @@ import {
   CHAT_AI_RESPONSE,
   CONTACT_US_FORM,
   CREATE_PROPERTY,
+  FORMS_SPARK,
   GET_LOGGED_IN_USER_DETAILS,
   GHC_AWS_URI,
   USER_DETAILS_FORM,
@@ -151,3 +152,14 @@ export const uploadSingleImageToAWS = async (file: any) => {
 
   return url;
 };
+
+export const sendFormSparkMail = async (formData: any) => {
+
+  try {
+    const data = await axios.post(FORMS_SPARK, formData);
+    return data;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+}

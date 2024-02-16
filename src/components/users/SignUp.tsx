@@ -5,7 +5,9 @@ import { CloseIcon } from "../../assets/svg";
 import { useUserModal } from "../../hooks/useUserModal";
 import { TERMS_PDF_URL } from "assets/data";
 import { toast } from "react-toastify";
-import { submitUserDetailsForm } from "backend";
+import { sendFormSparkMail, submitUserDetailsForm } from "backend";
+import { FORMS_SPARK } from "api";
+import axios from "axios";
 
 // interface SignUpProps {
 //   // Add your component's props here
@@ -33,23 +35,24 @@ const SignUp: React.FC = () => {
     if (!isAccept) return;
 
     //TODO: Add your form submission logic here
-    console.log("Form submitted:", formData);
+    const data = await sendFormSparkMail(formData);
+
     localStorage.setItem("IS_CONTACT_FORM_SUBMITTED", JSON.stringify(true));
     resetForm();
 
-    const res = await submitUserDetailsForm(formData as any);
-    if (!res.STATUS) {
-      toast.error(res.message);
-      return;
-    }
+    // const res = await submitUserDetailsForm(formData as any);
+    // if (!res.STATUS) {
+    //   toast.error(res.message);
+    //   return;
+    // }
 
-    toast.success("Your details submitted successfully")
+    toast.success("Your details submitted successfully");
 
     setTimeout(() => {
       onClose();
       navigate("/");
       window.location.reload();
-    }, 2000);
+    }, 1000);
   };
 
   return (
