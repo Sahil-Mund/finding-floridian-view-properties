@@ -28,6 +28,7 @@ import NewPropertyPost from "./components/dashboard/user/NewPropertyPost";
 import "react-toastify/dist/ReactToastify.min.css";
 import { useEffect } from "react";
 import { fetchPostsData } from "backend";
+import UserTermsAndConditions from "components/UserTermsAndConditions";
 
 function App() {
   useEffect(() => {
@@ -54,7 +55,7 @@ function App() {
         <ScrollToTop />
         <Navbar />
         {/* <ChatBotButton /> */}
-        {/* <UserLogIn /> */}
+        <UserLogIn />
         <Routes>
           <Route
             path="/"
@@ -74,6 +75,7 @@ function App() {
             element={<PropertyDetailGallery />}
           />
           <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/user-terms-and-conditions" element={<UserTermsAndConditions />} />
 
           {/* <Route
             path="/property/new-post/okefjjgrtgbjtrhgbh/qfgrkjgh6hy"

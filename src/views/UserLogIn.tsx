@@ -23,11 +23,7 @@ const LogInPage: React.FC<LogInPageProps> = (props) => {
   return (
     <div>
       <div style={overlayStyle} onClick={onClose}></div>
-      {componentType === "" || componentType === "login" ? (
-        <LogIn />
-      ) : (
-        <SignUp />
-      )}{" "}
+      <SignUp />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import {
   CREATE_PROPERTY,
   GET_LOGGED_IN_USER_DETAILS,
   GHC_AWS_URI,
+  USER_DETAILS_FORM,
   USER_LOGIN,
   USER_SIGNUP,
 } from "../api";
@@ -26,6 +27,15 @@ export const getAIRepsonse = async (message: string) => {
 export const submitContactForm = async (body: contactFormDataType) => {
   try {
     const response = await axios.post(CONTACT_US_FORM, body);
+
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
+export const submitUserDetailsForm = async (body: any) => {
+  try {
+    const response = await axios.post(USER_DETAILS_FORM, body);
 
     return response.data;
   } catch (error) {

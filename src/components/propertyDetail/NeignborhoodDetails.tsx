@@ -7,16 +7,21 @@ interface NeignborhoodDetailsProps {
 }
 
 const NeignborhoodDetails: React.FC<NeignborhoodDetailsProps> = ({ data }) => {
-  const leftGradeVarities = [
-    "Safety",
-    "Cultural Diversity",
-    "Education & Schools",
-  ];
-  const rightGradeVarities = [
-    "Convenience",
-    "Healthcare Facilities",
-    "Scenic Views",
-  ];
+  // const leftGradeVarities = [
+  //   "Safety",
+  //   "Cultural Diversity",
+  //   "Education & Schools",
+  // ];
+  // const rightGradeVarities = [
+  //   "Convenience",
+  //   "Healthcare Facilities",
+  //   "Scenic Views",
+  // ];
+
+  console.log(data);
+  
+  const leftGradeVarities = data.left;
+  const rightGradeVarities = data.right;
 
   return (
     <div className="neighborhood-container">
@@ -32,19 +37,20 @@ const NeignborhoodDetails: React.FC<NeignborhoodDetailsProps> = ({ data }) => {
         </div>
         <div className="bottom">
           <div className="left">
-            {leftGradeVarities.map((ele, index) => (
-              <div key={index}>
-                <span className="grade-btn-sm">{data[ele]}</span>
-                <span className="grades-desc">{ele}</span>
+            {Object.entries(data.left).map(([key, value]) => (
+              <div key={key}>
+                <span className="grade-btn-sm">{data.left[key]}</span>
+                <span className="grades-desc">{key}</span>
               </div>
             ))}
+          
           </div>
           <StraightLine />
           <div className="right">
-            {rightGradeVarities.map((ele, index) => (
-              <div key={index}>
-                <span className="grade-btn-sm">{data.grade}</span>
-                <span className="grades-desc">{ele}</span>
+          {Object.entries(data.right).map(([key, value]) => (
+              <div key={key}>
+                <span className="grade-btn-sm">{data.right[key]}</span>
+                <span className="grades-desc">{key}</span>
               </div>
             ))}
           </div>
@@ -61,7 +67,7 @@ const NeignborhoodDetails: React.FC<NeignborhoodDetailsProps> = ({ data }) => {
         ></iframe>
 
         <div>
-          <a href={data.iframe_src} target="_blank" rel="noopener noreferrer">
+          <a href={data.location_url} target="_blank" rel="noopener noreferrer">
             <ShareIcon
               style={{ position: "absolute", top: "1%", right: "10px" }}
             />

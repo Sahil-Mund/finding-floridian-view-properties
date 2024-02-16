@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { CloseIcon } from "../../assets/svg";
 import { useUserModal } from "../../hooks/useUserModal";
+import { TERMS_PDF_URL } from "assets/data";
+import { toast } from "react-toastify";
+import { submitUserDetailsForm } from "backend";
 
 // interface SignUpProps {
 //   // Add your component's props here
@@ -10,45 +13,72 @@ import { useUserModal } from "../../hooks/useUserModal";
 
 const SignUp: React.FC = () => {
   const { formData, handleChange, resetForm } = useForm({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    password: "",
-    confirmPassword: "",
+    phone: "",
   });
 
-  const {  onClose, changeComponentType } = useUserModal();
+  const [isAccept, setIsAccept] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const navigate = useNavigate();
+
+  const { isModalOpen: isOpen, onClose, changeComponentType } = useUserModal();
+
+  // const { onClose, changeComponentType } = useUserModal();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO : Add a validation to throw error
-    if (formData.password !== formData.confirmPassword) return;
+    if (!isAccept) return;
 
     //TODO: Add your form submission logic here
     console.log("Form submitted:", formData);
+    localStorage.setItem("IS_CONTACT_FORM_SUBMITTED", JSON.stringify(true));
     resetForm();
+
+    const res = await submitUserDetailsForm(formData as any);
+    if (!res.STATUS) {
+      toast.error(res.message);
+      return;
+    }
+
+    toast.success("Your details submitted successfully")
+
+    setTimeout(() => {
+      onClose();
+      navigate("/");
+      window.location.reload();
+    }, 2000);
   };
 
   return (
-    <section className="user-registration">
+    <section
+      className="user-registration"
+      style={{ display: isOpen ? "block" : "none" }}
+    >
       <div className="container-box">
         <div className="close-btn">
           <CloseIcon onClick={onClose} />
         </div>
         <div className="content">
-          <h1>Create your account</h1>
-          <h5>Please log in with your customer account to continue.</h5>
-          <p>
-            If you received a quote by email, you can view your quote by
-            creating an account or logging-in with an existing account below.
-          </p>
+          <h1>Unlock Your Properties</h1>
+          <h5>Please fill out the info below to unlock.</h5>
         </div>
         <div className="form-container">
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Name:"
-              name="name"
-              value={formData.name}
+              placeholder="First Name:"
+              name="firstName"
+              value={formData.firstName}
+              onChange={(e) => handleChange(e)}
+            />
+            <input
+              type="text"
+              placeholder="Last Name:"
+              name="lastName"
+              value={formData.lastName}
               onChange={(e) => handleChange(e)}
             />
             <input
@@ -59,33 +89,35 @@ const SignUp: React.FC = () => {
               onChange={handleChange}
             />
             <input
-              type="password"
-              placeholder="Password: (Create a Password)"
-              name="password"
-              value={formData.password}
+              type="text"
+              placeholder="Phone Number:"
+              name="phone"
+              value={formData.phone}
               onChange={handleChange}
             />
-            <input
-              type="password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              placeholder="Confirm Password: (Create a Password)"
-            />
+
             <div>
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                onChange={(e) => setIsAccept(e.target.checked)}
+                required
+              />
               <span>
-                <p> Terms and Conditions:</p>
+                {/* <iframe src={"https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2691077b-6e35-484e-be5b-457ee6dd8429_User%20Terms%20and%20Conditions.pdf"}></iframe> */}
+                <Link to={"/user-terms-and-conditions"} target="_blank">
+                  <p> Terms and Conditions</p>
+                </Link>
+
                 <p> I agree to the Terms and Conditions.</p>
               </span>
             </div>
             <div className="btns">
               <button className="btn-primary" type="submit">
-                SIGNUP
+                UNLOCK
               </button>
-              <span>
+              {/* <span>
                 Existing User? <span onClick={() => changeComponentType('login')} className="pointer sign-up-btn">LogIn</span>
-              </span>
+              </span> */}
             </div>
           </form>
         </div>

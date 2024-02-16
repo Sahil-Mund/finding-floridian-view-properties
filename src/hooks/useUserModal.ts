@@ -14,7 +14,7 @@ export const useUserProvideModal = () => {
 
   const onClose = () => {
     setIsModalOpen(false);
-    changeComponentType("");
+    // changeComponentType("");
   };
 
   const onOpen = () => {

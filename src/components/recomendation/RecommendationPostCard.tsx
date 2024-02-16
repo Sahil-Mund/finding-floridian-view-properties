@@ -25,32 +25,29 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
   const [unLock, setUnLock] = useState<boolean>(false);
   const [ispremiumUser, setIspremiumUser] = useState<boolean>(false);
   const navigate = useNavigate();
-  // const { onOpen } = useUserModal();
+
+  const { onOpen } = useUserModal();
+
 
   const handleUnlock = async () => {
     setUnLock(true);
     setTimeout(() => {
       setIspremiumUser(false);
-      // onOpen();
-      alert('Get in touch with your home girl to know more')
-      navigate('/contact-us')
+      onOpen();
+      // alert('Get in touch with your home girl to know more')
+      // navigate('/contact-us')
       setUnLock(false); // TODO:  will remove this later
     }, 3000);
   };
-  const handleModal = (
-    e: React.MouseEvent<HTMLSpanElement | HTMLDivElement>,
-    isVisibe: boolean
-  ) => {
-    // setIsModalVisible(isVisibe);
-    e.stopPropagation();
-  };
+
 
   useEffect(() => {
     const is_Submitted = JSON.parse(
       localStorage.getItem("IS_CONTACT_FORM_SUBMITTED") as string
     );
-    console.log(is_Submitted);
 
+    console.log(is_Submitted);
+    
     if (is_Submitted) {
       setIspremiumUser(true);
     }
@@ -59,7 +56,14 @@ const RecommendationPostCard: React.FC<RecommendationPostCardProps> = ({
 
   return (
     <section className="recommendation-post-section">
-      <div className="container-box">
+      <div className="container-box" >
+      <h2>Here are the top picks from your Home Girl.</h2>
+        <h1>DOWNTOWN, ST PETERSBURG, FLORIDA</h1>
+        <p>
+          Our advanced AI has analyzed your preferences and handpicked three
+          exceptional properties that offer a unique blend of features that
+          match your ideal Florida lifestyle.
+        </p>
         <div className="post-items">
           {data?.map((ele, index) => (
             <div className="post-item" key={index}>

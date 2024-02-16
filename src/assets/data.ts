@@ -41,6 +41,7 @@ export const postCardDetails = [
     }
 ];
 
+export const TERMS_PDF_URL = './User Terms and Conditions.pdf'
 
 
 export const apartmanetDetails = [
@@ -71,13 +72,25 @@ export const apartmanetDetails = [
             property_title: "EVO Apartments",
             desc: "is situated in a thriving community that offers safety, convenience, and a vibrant atmosphere.",
             grade: "A",
-            Safety: "C",
-            "Cultural Diversity": "A",
-            "Education & Schools": "B",
-            Convenience: "A+",
-            "Healthcare Facilities": "A-",
-            "Scenic Views": "A",
-            location_url:"https://www.google.com/maps/place/St.+Petersburg,+FL+33701,+USA/@27.8265104,-82.7798593,12z/data=!3m1!4b1!4m6!3m5!1s0x88c2e19ba9c0be39:0x8ae47e3adb68d30a!8m2!3d27.7696063!4d-82.6321376!16s%2Fm%2F01_0w_9?entry=ttu",
+            left: {
+                "Housing": "B-",
+                "Health & Fitness": "A-",
+                "Commute": "A-",
+                "Cost of Living": "B-",
+                "Outdoor Activities": "A-",
+                "Good for Families": "B+",
+            },
+            right: {
+                "Crime & Safety": "C",
+                "Nightlife": "A",
+                "Diversity": "A",
+                "Weather": "A",
+                "Jobs": "B",
+                "Public Schools": "B",
+
+            },
+
+            location_url: "https://www.google.com/maps?ll=27.826383,-82.697457&z=11&t=m&hl=en&gl=IN&mapclient=embed&q=St.+Petersburg,+FL+33701+USA",
             iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112910.59273912094!2d-82.7798593421373!3d27.826510408264312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ba9c0be39%3A0x8ae47e3adb68d30a!2sSt.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1708005058097!5m2!1sen!2sin"
         },
         apartmentDetails: {
@@ -125,7 +138,7 @@ export const apartmanetDetails = [
         ],
 
         extendedPerksDesc:
-            "Nestled in Alexandria's heart, the EVO Apartments offers easy access to the historic Old Town. Wander through cobblestone streets, explore charming shops, and savor moments at cozy cafes.<br> With public transportation at your fingertips, commuting is a breeze. Dive into Alexandria's vibrant arts and culture scene, making the most of your stay's central location.",
+            "Soak it all in, St. Pete welcomes you to an inclusive city full of opportunity. Offering a vibrant mix of tropical weather, culture, shopping, dining and recreation – downtown St. Petersburg is your next home for coastal adventure.<br> Walking distance from the bay and in the middle of the Waterfront Arts District, Evo is perfectly positioned to walk to museums, professional sports games, and sailing right on the water’s edge. Options are endless in this quaint, pedestrian friendly neighborhood. Let your soul shine, and come alive in St. Pete.",
 
         gallery:
             [
@@ -142,7 +155,6 @@ export const apartmanetDetails = [
                 "https://images1.apartments.com/i2/2lCQxCAFiZ7Kf9A9xnqqStXvdINv2NV8s0lhpVFSjbg/116/evo-apartments-saint-petersburg-fl-building-photo.jpg?p=1"
             ],
     },
-
     {
         id: 2,
         isPremium: true,
@@ -171,13 +183,27 @@ export const apartmanetDetails = [
             property_title: "Ascent Apartments",
             desc: "is situated in a thriving community that offers safety, convenience, and a vibrant atmosphere.",
             grade: "A",
-            Safety: "C",
-            "Cultural Diversity": "A",
-            "Education & Schools": "B",
-            Convenience: "A+",
-            "Healthcare Facilities": "A-",
-            "Scenic Views": "A",
-            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.2235886824606!2d-82.63850092453028!3d27.772084076145532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ce7caebc7%3A0x33de43f0991d0194!2s225%201st%20Ave%20N%2C%20St.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1707924504337!5m2!1sen!2sin"
+            left: {
+                "Housing": "B-",
+                "Health & Fitness": "A-",
+                "Commute": "A-",
+                "Cost of Living": "B-",
+                "Outdoor Activities": "A-",
+                "Good for Families": "B+",
+            },
+            right: {
+                "Crime & Safety": "C",
+                "Nightlife": "A",
+                "Diversity": "A",
+                "Weather": "A",
+                "Jobs": "B",
+                "Public Schools": "B",
+
+            },
+            location_url: "https://www.google.com/maps?ll=27.826383,-82.697457&z=10&t=m&hl=en&gl=IN&mapclient=embed&q=St.+Petersburg,+FL+33701+USA",
+
+
+            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225821.65399698773!2d-82.8622682706131!3d27.826285196479425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ba9c0be39%3A0x8ae47e3adb68d30a!2sSt.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1708080306752!5m2!1sen!2sin"
         },
         apartmentDetails: {
             bedroom: "1",
@@ -223,7 +249,7 @@ export const apartmanetDetails = [
         ],
 
         extendedPerksDesc:
-            "Nestled in Alexandria's heart, the Fridai Apartment offers easy access to the historic Old Town. Wander through cobblestone streets, explore charming shops, and savor moments at cozy cafes.<br> With public transportation at your fingertips, commuting is a breeze. Dive into Alexandria's vibrant arts and culture scene, making the most of your stay's central location.",
+            "An enriched lifestyle layered with the stuff that makes for your very best day. Your very brightest. Filled with downtown energy and sun-soaked vibrancy for those who like to live in the moment and step into the frequency of their highest vibe.",
 
         gallery:
             [
@@ -273,13 +299,27 @@ export const apartmanetDetails = [
             property_title: "Camden Pier District",
             desc: "is situated in a thriving community that offers safety, convenience, and a vibrant atmosphere.",
             grade: "A",
-            Safety: "C",
-            "Cultural Diversity": "A",
-            "Education & Schools": "B",
-            Convenience: "A+",
-            "Healthcare Facilities": "A-",
-            "Scenic Views": "A",
-            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.3631983187333!2d-82.63934322453048!3d27.767781076148058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19b375ee441%3A0x6bf27dd864d65250!2s330%203rd%20St%20S%2C%20St.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1707928799264!5m2!1sen!2sin"
+            left: {
+                "Housing": "B-",
+                "Health & Fitness": "A-",
+                "Commute": "A-",
+                "Cost of Living": "B-",
+                "Outdoor Activities": "A-",
+                "Good for Families": "B+",
+            },
+            right: {
+                "Crime & Safety": "C",
+                "Nightlife": "A",
+                "Diversity": "A",
+                "Weather": "A",
+                "Jobs": "B",
+                "Public Schools": "B",
+
+            },
+            location_url: "https://www.google.com/maps?ll=27.826383,-82.697457&z=10&t=m&hl=en&gl=IN&mapclient=embed&q=St.+Petersburg,+FL+33701+USA",
+
+
+            iframe_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225821.65399698773!2d-82.8622682706131!3d27.826285196479425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19ba9c0be39%3A0x8ae47e3adb68d30a!2sSt.%20Petersburg%2C%20FL%2033701%2C%20USA!5e0!3m2!1sen!2sin!4v1708080306752!5m2!1sen!2sin"
         },
         apartmentDetails: {
             bedroom: "2",
@@ -325,7 +365,7 @@ export const apartmanetDetails = [
         ],
 
         extendedPerksDesc:
-            "Nestled in Alexandria's heart, the Camden Pier District offers easy access to the historic Old Town. Wander through cobblestone streets, explore charming shops, and savor moments at cozy cafes.<br> With public transportation at your fingertips, commuting is a breeze. Dive into Alexandria's vibrant arts and culture scene, making the most of your stay's central location.",
+            "Camden Pier District is all about location and in the heart of thriving downtown St. Petersburg. Take a step out of your studio, one, two or three-bedroom apartment and find yourself blocks from the best food, drink, entertainment, and art that the St. <br> Pete area has to offer. The modern apartment homes and amazing rooftop amenity spaces with panoramic views of the water and the city are above the rest. It is the perfect place to call home. <br> Live in thriving downtown St. Petersburg and get to come home every day to the comforts of Camden Pier District. Luxury, exclusivity, panoramic views…you will have it all and #LiveAbove when you live at Camden Pier District.",
 
         gallery:
             [
