@@ -249,7 +249,8 @@ export const apartmanetDetails = [
         ],
 
         extendedPerksDesc:
-            "An enriched lifestyle layered with the stuff that makes for your very best day. Your very brightest. Filled with downtown energy and sun-soaked vibrancy for those who like to live in the moment and step into the frequency of their highest vibe.",
+            // "An enriched lifestyle layered with the stuff that makes for your very best day. Your very brightest. Filled with downtown energy and sun-soaked vibrancy for those who like to live in the moment and step into the frequency of their highest vibe. <br>Complimentary building wide WIFI throughout  <br>Sun deck with pool, cabanas, & city views  <br>24-hour gym with cardio, free weights  <br>Co/work lounge w/ private meeting rooms  <br>Garage parking w/ EV car charging stations  <br>Elevated rooftop lounge w/ terrace & spectacular views  <br>",
+            "Complimentary building wide WIFI throughout  <br>Sun deck with pool, cabanas, & city views  <br>24-hour gym with cardio, free weights  <br>Co/work lounge w/ private meeting rooms  <br>Garage parking w/ EV car charging stations  <br>Elevated rooftop lounge w/ terrace & spectacular views  <br>",
 
         gallery:
             [
